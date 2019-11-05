@@ -1,24 +1,46 @@
-package ltd.pitupi.sample.algo.array;
+package ltd.pitupi.sample.algo.array_05;
 
 import java.util.Arrays;
 
-public class SelfArray {
+public class SelfGenericArray {
 	private String data[];
+	private int capacity;
 	private int size;
 
-	public SelfArray(int capacity) {
+	public SelfGenericArray(int capacity) {
 		super();
 		this.data = new String[capacity];
 		this.size = 0;
+		this.capacity = capacity;
+	}
+
+	public SelfGenericArray() {
+		super();
+		this.data = new String[10];
+		this.size = 0;
+		this.capacity = 10;
 	}
 
 	public void add(int index,String value) throws Exception {
 		checkIndex(index);
+		if(size==data.length){
+			resize();
+		}
 		for(int i=index;i<size;i++){
 			data[i+1]=data[i];
 		}
 		data[index]=value;
 		size++;
+	}
+	
+	private void resize(){
+		int newCapacity = size*2;
+		String[] resize = new String[newCapacity];
+		for(int i=0;i<size;i++){
+			resize[i]=data[i];
+		}
+		data=resize;
+		capacity=newCapacity;
 	}
 
 	public void delete(int index) throws Exception {
@@ -44,9 +66,18 @@ public class SelfArray {
 	}
 
 	public static void main(String[] args) throws Exception {
-		SelfArray sa = new SelfArray(10);
+		SelfGenericArray sa = new SelfGenericArray(10);
 		sa.add(0, "A");System.out.println(sa);
 		sa.add(0, "B");System.out.println(sa);
+		sa.add(1, "C");System.out.println(sa);
+		sa.add(1, "C");System.out.println(sa);
+		sa.add(1, "C");System.out.println(sa);
+		sa.add(1, "C");System.out.println(sa);
+		sa.add(1, "C");System.out.println(sa);
+		sa.add(1, "C");System.out.println(sa);
+		sa.add(1, "C");System.out.println(sa);
+		sa.add(1, "C");System.out.println(sa);
+		sa.add(1, "C");System.out.println(sa);
 		sa.add(1, "C");System.out.println(sa);
 		sa.find(1);System.out.println(sa);
 		sa.delete(1);System.out.println(sa);

@@ -1,4 +1,4 @@
-package ltd.pitupi.sample.algo.array;
+package ltd.pitupi.sample.algo.array_05;
 
 public class GenericArray<T> {
     private T[] data;

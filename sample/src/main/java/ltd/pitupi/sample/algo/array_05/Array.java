@@ -1,4 +1,4 @@
-package ltd.pitupi.sample.algo.array;
+package ltd.pitupi.sample.algo.array_05;
 
 /**
  * 1) 数组的插入、删除、按照下标随机访问操作；
