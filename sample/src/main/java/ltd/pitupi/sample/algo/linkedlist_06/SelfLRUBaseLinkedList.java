@@ -1,4 +1,4 @@
-package ltd.pitupi.sample.algo.linked_06;
+package ltd.pitupi.sample.algo.linkedlist_06;
 
 import java.util.Scanner;
 

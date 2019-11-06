@@ -1,4 +1,4 @@
-package ltd.pitupi.sample.algo.linked_06;
+package ltd.pitupi.sample.algo.linkedlist_06;
 
 /**
  * 1）单链表的插入、删除、查找操作；
